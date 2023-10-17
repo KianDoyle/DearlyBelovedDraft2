@@ -13,28 +13,65 @@ export default function Home() {
   const router = useRouter();
   const { page } = router.query;
 
+  const handleNavigation = (newPage: string) => {
+    router.push(`/${newPage}`);
+  };
+
   let content;
 
   switch ( page ) {
     case 'Admin':
       content = < Admin />;
+      break;
     case 'Login':
       content = < Login />;
+      break;
     case 'Index':
       content = < Index />;
+      break;
     case 'About':
       content = < About />;
+      break;
     case 'Contact':
       content = < Contact />;
+      break;
     case 'Book':
       content = < Book />;
+      break;
     case 'Partners':
       content = < Partners />;
+      break; 
+    default: 
+      content = < Index />;
   }
 
   return (
     <div>
-      {/* make constant parts of page here */}
+      <div id="logo">
+        {/* add logo image here */}
+      </div>
+      <div id="nav">
+        <ul>
+          <li>
+            <button onClick={()=> handleNavigation('index')}>HOME</button>
+          </li>
+          <li>
+            <button onClick={()=> handleNavigation('about')}>ABOUT</button>
+          </li>
+          <li>
+            <button onClick={()=> handleNavigation('contact')}>CONTACT</button>
+          </li>
+          <li>
+            <button onClick={()=> handleNavigation('book')}>BOOK</button>
+          </li>
+          <li>
+            <button onClick={()=> handleNavigation('partners')}>PARTNERS</button>
+          </li>
+        </ul>
+      </div>
+      <div id="background">
+        {/* add background image here */}
+      </div>
       {content}  
     </div>
   )
