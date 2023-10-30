@@ -68,11 +68,21 @@ export default function Home() {
             <button onClick={()=> handleNavigation('partners')}>PARTNERS</button>
           </li>
         </ul>
+        <div>
+          <a href="" target="_blank">
+            <img src=""/>
+          </a>
+          <a href="" target="_blank">
+            <img src=""/>
+          </a>
+        </div>
       </div>
       <div id="background">
         {/* add background image here */}
       </div>
-      {content}  
+      <div>
+        {content}
+      </div>
     </div>
   )
 }
