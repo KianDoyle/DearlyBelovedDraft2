@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+
 import Admin from './admin';
 import Login from './login';
 import Index from './index';
@@ -7,6 +8,8 @@ import About from './about';
 import Contact from './contact'
 import Book from './book';
 import Partners from './partners';
+
+import styles from '../app/styles.module.css'
 
 export default function Home() {
   
@@ -50,7 +53,7 @@ export default function Home() {
       <div id="logo">
         {/* add logo image here */}
       </div>
-      <div id="nav">
+      <div id="nav" className={styles.nav}>
         <ul>
           <li>
             <button onClick={()=> handleNavigation('index')}>HOME</button>
@@ -68,17 +71,18 @@ export default function Home() {
             <button onClick={()=> handleNavigation('partners')}>PARTNERS</button>
           </li>
         </ul>
-        <div>
-          <a href="" target="_blank">
-            <img src=""/>
-          </a>
-          <a href="" target="_blank">
-            <img src=""/>
-          </a>
+        <div className={styles.padding}>
+            <a className={styles.instagram} href="https://www.instagram.com/dearlybelovedphotographer/" target="_blank">
+                <img src="../app/public/iglogo.png" width="35px" height="35px"></img>
+            </a>
+            <a className={styles.facebook} href="https://www.facebook.com/profile.php?id=61550850638212" target="_blank">
+                <img src="../app/public/fblogo.png" width="35px" height="35px"></img>
+            </a>
         </div>
       </div>
-      <div id="background">
-        {/* add background image here */}
+      <div id="background" className={styles.background}>
+          <img className={styles.logoimg} src="../app/public/logo - circle only-png.png" width="700px"></img>
+          <img className={styles.logotext} src="../app/public/logo - text only-png.png" width="700px"></img>
       </div>
       <div>
         {content}

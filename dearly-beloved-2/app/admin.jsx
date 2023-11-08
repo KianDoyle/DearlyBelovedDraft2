@@ -1,5 +1,6 @@
 import React from 'react';
-import prisma from '../db/prismaClient'
+import prisma from '../db/prismaClient';
+import styles from './app/styles.module.css';
 
 function Admin() {
 
@@ -24,8 +25,8 @@ function Admin() {
 
     return (
         <div>
-            <h1>Welcome, Lezli!</h1>
-            <div id="bookings">
+            <h1 className={styles.title}>Welcome, Lezli!</h1>
+            <div id="bookings" className={styles.bookings}>
                 <ul>
                     { bookings.map((booking) => (
                         <li key={booking.id}>
@@ -39,7 +40,7 @@ function Admin() {
                     ))}
                 </ul>
             </div>
-            <div id="messages">
+            <div id="messages" className={styles.messages}>
                 <ul>
                     { messages.map((message) => (
                         <li key={message.id}>
@@ -50,7 +51,6 @@ function Admin() {
                         </li>
                     ))}
                 </ul>
-                { /* pull all messages from database here */}
             </div>
         </div>);
 }
