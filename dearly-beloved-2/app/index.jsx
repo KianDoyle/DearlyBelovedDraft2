@@ -16,6 +16,8 @@ const accessToken = "sl.Bo9w_Mgf0__pJUmZE6OPn_kByIynB-j6CYrX-XidCqy74HqvDxZxCbhU
 dbox.setAccessToken(accessToken);
 {/* add link to dropbox here */}
 
+// Almost done - need to make machine in Lez's dropbox and input the details here 
+
 async function listFilesInFolder(folderPath) {
     try {
         const response = await dbox.listFilesInFolder({

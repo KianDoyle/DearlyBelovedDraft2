@@ -50,8 +50,8 @@ export default function Home() {
 
   return (
     <div>
-      <div id="logo">
-        {/* add logo image here */}
+      <div id="logo-link">
+        <img className={styles.logoimg} id="logo-img" src="../app/public/logo - circle only-png.png" alt="logo" width="100px" height="100px"></img>
       </div>
       <div id="nav" className={styles.nav}>
         <ul>
