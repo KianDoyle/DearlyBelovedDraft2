@@ -17,7 +17,7 @@ body {
     align-items: center; 
 }
 
-.logoimg {
+.logoimgtop {
     margin-left: 10px;
 }
 
@@ -76,50 +76,54 @@ a:hover {
 
 
 /* Admin Page */
-.admin_title {
-
+.admin-body {
+    display: grid;
+    text-align: center;
+    background: black;
 }
-.admin_bookings {
-    width: auto;
+.admin-title {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: #F1B821;
 }
-.admin-booking-ul {
-
+.admin-bm-wrapper {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;  
+    display: grid;
 }
-.admin-booking-li {
-
+.admin-booking {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: black;
 }
-.admin_bookings_username {
-
+.admin-booking-ul, .admin-message-ul {
+    list-style: none;
+    background: rgba(241,184,33, 0.3);
+    border-radius: 25px;
+    border: 1px solid black;
+    margin-block: 5px;
+    padding: 0px;
 }
-.admin_bookings_date {
-
+.admin-booking-li, .admin-message-li {
+    background: rgba(241,184,33, 1);
+    border-radius: 20px;
+    margin-inline: 10%;
+    margin-block: 5px;
+    padding: 10px;
 }
-.admin_info {
-
-}
-.admin_bookings_number {
-
-}
-.admin_email {
-
-}
-.admin_messages {
-    width: auto;
-}
-.admin-message-ul {
-
-}
-.admin-message-li {
-
-}
-.admin_message_wrapper {
-
-}
-.admin_message_username {
-
-}
-.admin_message_content {
-    
+.admin-message {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-inline: 10%;
+    color: black;
 }
 
 
@@ -310,4 +314,58 @@ a:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+}
+
+/* Responsive Queries */
+@media only screen and (max-width: 800px) {
+    /* Global */
+    .nav {
+        display: flex;
+        align-items: column; 
+    }
+    
+    .logoimgtop {
+        flex: 1;
+        height: 100px;
+    }
+    
+    .nav-links {
+        flex: 1;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .padding {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    
+    .background {
+        margin-top: 50px;
+        width: 90%;
+        animation: none;
+    }
+    
+    .logotext {
+        width: 100%;
+    }
+    
+    .logoimg {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    /* Index */
+
+    /* Admin */
+
+    /* About */
+
+    /* Contact */
+
+    /* Book */
+
+    /* Partners */
 }
