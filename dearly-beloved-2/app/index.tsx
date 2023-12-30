@@ -3,7 +3,7 @@ import { usePathname, useRouter } from 'next/navigation';
 
 import Admin from './admin';
 import Login from './login';
-import Index from './index';
+import Home from './home';
 import About from './about';
 import Contact from './contact'
 import Book from './book';
@@ -11,7 +11,7 @@ import Partners from './partners';
 
 import styles from '../app/styles.module.css'
 
-export default function Home() {
+export default function Index() {
   
   const router = useRouter();
   const page = usePathname();
@@ -32,7 +32,7 @@ export default function Home() {
       content = < Login />;
       break;
     case 'Index':
-      content = < Index />;
+      content = < Home />;
       break;
     case 'About':
       content = < About />;

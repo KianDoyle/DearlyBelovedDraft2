@@ -6,7 +6,7 @@ import styles from '../app/styles.module.css';
 const clientId = 'woixl1iflym0w59';
 const clientSecret = 'zwm6elhd2nrlfkg'; // Replace with your app's client secret
 
-async function Index() {
+async function Home() {
     try {
         const [images, setImages] = useState([]);
 
@@ -139,4 +139,4 @@ async function Index() {
 
 };
 
-export default Index;
+export default Home;
