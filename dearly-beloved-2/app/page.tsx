@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRouter } from 'next/router';
+import { usePathname, useRouter } from 'next/navigation';
 
 import Admin from './admin';
 import Login from './login';
@@ -14,11 +14,13 @@ import styles from '../app/styles.module.css'
 export default function Home() {
   
   const router = useRouter();
-  const { page } = router.query;
+  const page = usePathname();
 
-  const handleNavigation = (newPage: string) => {
-    router.push(`/${newPage}`);
-  };
+  // const { page } = router.query;
+
+  // const handleNavigation = (newPage: string) => {
+  //   router.push(`/${newPage}`);
+  // };
 
   let content;
 
@@ -55,7 +57,7 @@ export default function Home() {
       </div>
       <div id="nav" className={styles.nav}>
         <ul>
-          <li>
+          {/* <li>
             <button onClick={()=> handleNavigation('index')}>HOME</button>
           </li>
           <li>
@@ -69,6 +71,21 @@ export default function Home() {
           </li>
           <li>
             <button onClick={()=> handleNavigation('partners')}>PARTNERS</button>
+          </li> */}
+          <li>
+            <button onClick={()=> router.push('/index')}>HOME</button>
+          </li>
+          <li>
+            <button onClick={()=> router.push('/about')}>ABOUT</button>
+          </li>
+          <li>
+            <button onClick={()=> router.push('/contact')}>CONTACT</button>
+          </li>
+          <li>
+            <button onClick={()=> router.push('/book')}>BOOK</button>
+          </li>
+          <li>
+            <button onClick={()=> router.push('/partners')}>PARTNERS</button>
           </li>
         </ul>
         <div className={styles.padding}>
