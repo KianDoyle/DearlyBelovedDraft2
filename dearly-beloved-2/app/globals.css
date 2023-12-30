@@ -25,3 +25,78 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+body {
+  background-color: black;
+  align-items: center;
+  align-content: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  visibility: hidden;
+}
+
+.nav {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center; 
+}
+
+.logoimgtop {
+  margin-left: 10px;
+}
+
+.nav-links {
+  text-align: center;
+  width: 100%;
+
+}
+
+.padding {
+  min-width: 100px;
+  min-height: 100px;
+  margin-right: 10px;
+  display: flex;
+}
+
+.instagram {
+  padding-top: 25%;
+}
+
+.facebook {
+  padding-top: 25%;
+}
+
+a {
+  padding-inline: 5px;
+  color: #F1B821;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 5px  #FFE6A4;
+  color: #FFF0CA;
+}
+
+.a-active {
+  text-shadow: 0 0 5px  #FFE6A4;
+  color: #FFF0CA;
+}
+
+.background {
+  background-color: black;
+  margin: auto;
+  width: 700px;
+  overflow: hidden;
+}
+
+.logotext {
+  opacity: 1;
+}
+
+.logoimg {
+  width: 700px;
+  filter: blur(0);
+}

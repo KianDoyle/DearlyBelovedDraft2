@@ -1,5 +1,6 @@
 /* Global Elements */
-body {
+/* add global elements to globals.css file */
+/* body {
     background-color: black;
     align-items: center;
     align-content: center;
@@ -72,7 +73,7 @@ a:hover {
 .logoimg {
     width: 700px;
     filter: blur(0);
-}
+} */
 
 
 /* Admin Page */
