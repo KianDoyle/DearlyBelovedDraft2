@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from '../app/styles.module.css';
+import styles from './styles.module.css';
 
 function Partners() {
     return (
         <div class={styles.partners-formatting-wrapper}> 
             <div class={styles.partners-row-1}>
                 <p class={styles.partners-p}>
-                    Over the years I've had the pleasure of working with some amazing people
+                    Over the years I&apos;ve had the pleasure of working with some amazing people
                     <br></br>They deliver the highest quality services with a real care for their clients
                     <br></br>Check out some of these wonderful people below and follow the links to see their work
                 </p>

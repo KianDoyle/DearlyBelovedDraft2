@@ -1,6 +1,6 @@
 import React from 'react';
 import prisma from '../db/prismaClient';
-import styles from './app/styles.module.css';
+import styles from './styles.module.css';
 
 function Admin() {
 

@@ -9,7 +9,7 @@ import Contact from './contact'
 import Book from './book';
 import Partners from './partners';
 
-import styles from '../app/styles.module.css'
+import styles from './styles.module.css'
 
 export default function Index() {
   

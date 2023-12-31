@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../app/styles.module.css';
+import styles from './styles.module.css';
 
 function Book() {
 
@@ -7,7 +7,7 @@ function Book() {
     
     return (
         <div id="checkfront-widget-wrapper" className={styles.checkfront-widget-wrapper}>
-            <script type="text/javascript" src="//dearly-beloved-photography.checkfront.com/lib/interface--0.js"></script>
+            <script type="text/javascript" src="//dearly-beloved-photography.checkfront.com/lib/interface--0.js" async></script>
 
             <div id="CHECKFRONT_WIDGET_01">
                 <p id="CHECKFRONT_LOADER"
@@ -22,7 +22,7 @@ function Book() {
                     options: 'tabs',
                     style: 'color: fff;',
                     provider: 'droplet'
-                }).render()
+                }).render() 
             }
             <noscript>
                 <a href="https://dearly-beloved-photography.checkfront.com/reserve/" style="font-size: 16px">Continue to
