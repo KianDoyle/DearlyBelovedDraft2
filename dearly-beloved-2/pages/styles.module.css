@@ -9,7 +9,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     visibility: hidden;
-}
+} */
 
 .nav {
     height: 120px;
@@ -43,7 +43,7 @@
     padding-top: 25%;
 }
 
-a {
+/* a {
     padding-inline: 5px;
     color: #F1B821;
     text-decoration: none;
@@ -57,7 +57,7 @@ a:hover {
 .a-active {
     text-shadow: 0 0 5px  #FFE6A4;
     color: #FFF0CA;
-}
+} */
 
 .background {
     background-color: black;
@@ -73,7 +73,7 @@ a:hover {
 .logoimg {
     width: 700px;
     filter: blur(0);
-} */
+}
 
 
 /* Admin Page */
@@ -226,7 +226,7 @@ a:hover {
 }
 
 /* About page */
-.about-wrapper {
+.aboutwrapper {
     width: 1100px;
     display: flex; 
     position: absolute;
@@ -234,7 +234,7 @@ a:hover {
     left: 50%;
     transform: translate(-50%, 0%);
 }
-.about-headshot-wrapper {
+.aboutheadshotwrapper {
     flex: 1;
     width: auto;
     backdrop-filter: blur(25px);
@@ -245,14 +245,14 @@ a:hover {
     text-align: center;
     font-size: large;
 }
-.about-info-wrapper {
+.aboutinfowrapper {
     flex: 1;
     padding: 10px;
     margin: 10px;
 }
 
 /* Contact Page */
-.contact-form-wrapper {
+.contactformwrapper {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -268,12 +268,12 @@ a:hover {
     padding-inline: 25px;
 }
 
-.contact-input-wrapper {
+.contactinputwrapper {
     display: flex;
     flex-direction: column;
 }
 
-.contact-input-label {
+.contactinputlabel {
     color: #F1B821;
     padding-top: 25px;
 }
@@ -292,7 +292,7 @@ a:hover {
     height: 150px;
 }
 
-.contact-button-wrapper {
+.contactbuttonwrapper {
     text-align: center;
     padding: 25px;
 }
@@ -309,7 +309,7 @@ a:hover {
 }
 
 /* Booking Page */
-.checkfront-widget-wrapper {
+.checkfrontwidgetwrapper {
     position: absolute;
     top: 50%;
     left: 50%;

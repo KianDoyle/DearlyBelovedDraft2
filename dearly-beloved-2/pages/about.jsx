@@ -4,11 +4,11 @@ import styles from './styles.module.css';
 function About() {
     return (
         <div>
-            <div className={styles.about-wrapper}>
-                <div id="headshot-wrapper" className={styles.about-headshot-wrapper}>
+            <div className={styles.aboutwrapper}>
+                <div id="headshot-wrapper" className={styles.aboutheadshotwrapper}>
                     <img src="./public/lezli-face.jpg" alt="headshot" width = "500px"></img>
                 </div>
-                <div id="info-wrapper" className={styles.about-info-wrapper}>
+                <div id="info-wrapper" className={styles.aboutinfowrapper}>
                     <p>
                         Hey there, I&apos;m Lezli - a passionate photographer with a love for all things alternative and unique. My lens is my way of capturing the world through a different perspective, and I&apos;m thrilled to have you join me on this visual journey.
                         <br></br>I&apos;ve always found beauty in the unconventional, the offbeat, and the extraordinary. From vibrant cityscapes to intimate portraits, my goal is to showcase the world&apos;s hidden wonders and celebrate individuality. With a background deeply rooted in alternative culture, I&apos;ve developed an eye for those fleeting moments that speak volumes.

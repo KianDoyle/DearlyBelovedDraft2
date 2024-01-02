@@ -46,9 +46,9 @@ function Contact() {
 
     return (
         <div>
-            <div id={styles.contact-form-wrapper}>
+            <div id={styles.contactformwrapper}>
                 <form method="post" name="contact-form" id="contact-form" className={styles.form} onSubmit={handleSubmit}>
-                    <div class={styles.contact-input-wrapper}>
+                    <div class={styles.contactinputwrapper}>
                         <label for="name-input" class={styles.contact-input-label}>FULL NAME</label>
                         <br></br>
                         <input type="text" id="name-input" className={styles.input} value={formData.name} onChange={handleChange}></input>

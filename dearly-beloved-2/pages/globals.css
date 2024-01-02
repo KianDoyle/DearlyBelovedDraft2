@@ -37,7 +37,7 @@ body {
   visibility: hidden;
 }
 
-.nav {
+/* .nav {
   height: 120px;
   width: 100%;
   display: flex;
@@ -67,7 +67,7 @@ body {
 
 .facebook {
   padding-top: 25%;
-}
+} */
 
 a {
   padding-inline: 5px;
@@ -85,7 +85,7 @@ a:hover {
   color: #FFF0CA;
 }
 
-.background {
+/* .background {
   background-color: black;
   margin: auto;
   width: 700px;
@@ -99,4 +99,4 @@ a:hover {
 .logoimg {
   width: 700px;
   filter: blur(0);
-}
+} */
