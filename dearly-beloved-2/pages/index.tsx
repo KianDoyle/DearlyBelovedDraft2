@@ -53,10 +53,10 @@ export default function Index() {
   return (
     <div>
       <div id="logo-link">
-        <img className={styles.logoimgtop} id="logo-img" src="../app/public/logo - circle only-png.png" alt="logo" width="100px" height="100px"></img>
+        <img className={styles.logoimgtop} id="logo-img" src="../public/logo - circle only-png.png" alt="logo" width="100px" height="100px"></img>
       </div>
       <div id="nav" className={styles.nav}>
-        <ul>
+        <ul className={styles.navlinkswrapper}>
           {/* <li>
             <button onClick={()=> handleNavigation('index')}>HOME</button>
           </li>
@@ -73,33 +73,33 @@ export default function Index() {
             <button onClick={()=> handleNavigation('partners')}>PARTNERS</button>
           </li> */}
           <li>
-            <button onClick={()=> router.push('/index')}>HOME</button>
+            <button onClick={()=> router.push('/index')} className={styles.navlinks}>HOME</button>
           </li>
           <li>
-            <button onClick={()=> router.push('/about')}>ABOUT</button>
+            <button onClick={()=> router.push('/about')} className={styles.navlinks}>ABOUT</button>
           </li>
           <li>
-            <button onClick={()=> router.push('/contact')}>CONTACT</button>
+            <button onClick={()=> router.push('/contact')} className={styles.navlinks}>CONTACT</button>
           </li>
           <li>
-            <button onClick={()=> router.push('/book')}>BOOK</button>
+            <button onClick={()=> router.push('/book')} className={styles.navlinks}>BOOK</button>
           </li>
           <li>
-            <button onClick={()=> router.push('/partners')}>PARTNERS</button>
+            <button onClick={()=> router.push('/partners')} className={styles.navlinks}>PARTNERS</button>
           </li>
         </ul>
         <div className={styles.padding}>
             <a className={styles.instagram} href="https://www.instagram.com/dearlybelovedphotographer/" target="_blank">
-                <img src="../app/public/iglogo.png" width="35px" height="35px"></img>
+                <img src="../public/iglogo.png" width="35px" height="35px"></img>
             </a>
             <a className={styles.facebook} href="https://www.facebook.com/profile.php?id=61550850638212" target="_blank">
-                <img src="../app/public/fblogo.png" width="35px" height="35px"></img>
+                <img src="../public/fblogo.png" width="35px" height="35px"></img>
             </a>
         </div>
       </div>
       <div id="background" className={styles.background}>
-          <img className={styles.logoimg} src="../app/public/logo - circle only-png.png" width="700px"></img>
-          <img className={styles.logotext} src="../app/public/logo - text only-png.png" width="700px"></img>
+          <img className={styles.logoimg} src="../public/logo - circle only-png.png" width="700px"></img>
+          <img className={styles.logotext} src="../public/logo - text only-png.png" width="700px"></img>
       </div>
       <div>
         {content}

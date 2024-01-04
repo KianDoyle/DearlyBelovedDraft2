@@ -86,10 +86,10 @@ async function Home() {
     };
 
     return (
-        <div className={styles.index - portfolio - images}>
+        <div className={styles.indexportfolioimages}>
             {/* import images from drop box link and 'style' them */}
-            <div className={styles.index - row}>
-                <div className={styles.index - column}>
+            <div className={styles.indexrow}>
+                <div className={styles.indexcolumn}>
                     {imageFiles.slice(0, 5).map((image) => (
                         <img
                             key={image.client_modified}
@@ -98,7 +98,7 @@ async function Home() {
                         />
                     ))};
                 </div>
-                <div className={styles.index - column}>
+                <div className={styles.indexcolumn}>
                     {imageFiles.slice(5, 10).map((image) => (
                         <img
                             key={image.client_modified}
@@ -107,7 +107,7 @@ async function Home() {
                         />
                     ))};
                 </div>
-                <div className={styles.index - column}>
+                <div className={styles.indexcolumn}>
                     {imageFiles.slice(10, 15).map((image) => (
                         <img
                             key={image.client_modified}
@@ -116,7 +116,7 @@ async function Home() {
                         />
                     ))};
                 </div>
-                <div className={styles.index - column}>
+                <div className={styles.indexcolumn}>
                     {imageFiles.slice(15, 20).map((image) => (
                         <img
                             key={image.client_modified}

@@ -22,7 +22,11 @@
     margin-left: 10px;
 }
 
-.nav-links {
+.navlinkswrapper {
+
+}
+
+.navlinks {
     text-align: center;
     width: 100%;
 
@@ -358,15 +362,99 @@ a:hover {
         width: 100%;
     }
 
-    /* Index */
+    /* Home */
+    .indexportfolioimages {
+
+    }
+    .indexrow {
+
+    }
+    .indexcolumn {
+
+    }
 
     /* Admin */
+    .adminbody {
 
+    }
+    .admintitle {
+
+    }
+    .adminbmwrapper {
+
+    }
+    .adminbooking {
+
+    }
+    .adminbookingul {
+
+    }
+    .adminbookingli {
+
+    }
+    .adminbookingsusername {
+
+    }
+    .adminbookingsdate {
+
+    }
+    .admininfo {
+
+    }
+    .adminbookingsnumber {
+
+    }
+    .adminemail {
+
+    }
+    .adminmessage {
+
+    }
+    .adminmessageul {
+
+    }
+    .adminmessageli {
+
+    }
+    .adminmessagewrapper {
+
+    }
+    .adminmessageusername {
+
+    }
+    .adminmessagecontent {
+
+    }
     /* About */
 
     /* Contact */
+    .contactformwrapper {
 
+    }
+    .form {
+
+    }
+    .contactinputwrapper {
+
+    }
+    .contactinputlabel {
+
+    }
+    .input {
+
+    }
+    .textarea {
+
+    }
+    .contactbuttonwrapper {
+
+    }
+    .button {
+
+    }
     /* Book */
+    .checkfrontwidgetwrapper {
 
+    }
     /* Partners */
 }

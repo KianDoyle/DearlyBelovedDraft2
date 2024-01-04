@@ -6,7 +6,7 @@ function Book() {
     {/* THIS IS A TEMP SOLUTION */}
     
     return (
-        <div id="checkfront-widget-wrapper" className={styles.checkfront-widget-wrapper}>
+        <div id="checkfront-widget-wrapper" className={styles.checkfrontwidgetwrapper}>
             <script type="text/javascript" src="//dearly-beloved-photography.checkfront.com/lib/interface--0.js" async></script>
 
             <div id="CHECKFRONT_WIDGET_01">
