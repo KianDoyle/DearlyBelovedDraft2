@@ -1,5 +1,6 @@
 import React from 'react';
 import { usePathname, useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 import Admin from './admin';
 import Login from './login';
@@ -16,40 +17,6 @@ export default function Index() {
   const router = useRouter();
   const page = usePathname();
 
-  // const { page } = router.query;
-
-  // const handleNavigation = (newPage: string) => {
-  //   router.push(`/${newPage}`);
-  // };
-
-  // let content;
-
-  // switch ( page ) {
-  //   case 'Admin':
-  //     content = < Admin />;
-  //     break;
-  //   case 'Login':
-  //     content = < Login />;
-  //     break;
-  //   case 'Index':
-  //     content = < Home />;
-  //     break;
-  //   case 'About':
-  //     content = < About />;
-  //     break;
-  //   case 'Contact':
-  //     content = < Contact />;
-  //     break;
-  //   case 'Book':
-  //     content = < Book />;
-  //     break;
-  //   case 'Partners':
-  //     content = < Partners />;
-  //     break; 
-  //   default: 
-  //     content = < Index />;
-  // }
-
   const pageComponents : { [key: string]: React.ReactElement} = {
     Admin: <Admin />,
     Login: <Login />,
@@ -65,7 +32,14 @@ export default function Index() {
   return (
     <div>
       <div id="logo-link">
-        <img className={styles.logoimgtop} id="logo-img" src="../public/logo - circle only-png.png" alt="logo" width="100px" height="100px"></img>
+        <Image 
+          className={styles.logoimgtop} 
+          id="logo-img" 
+          src="../public/logo - circle only-png.png" 
+          alt="logo" 
+          width={100} 
+          height={100}
+        />
       </div>
       <div id="nav" className={styles.nav}>
         <ul className={styles.navlinkswrapper}>
@@ -87,16 +61,40 @@ export default function Index() {
         </ul>
         <div className={styles.padding}>
             <a className={styles.instagram} href="https://www.instagram.com/dearlybelovedphotographer/" target="_blank">
-                <img src="../public/iglogo.png" width="35px" height="35px"></img>
+                <Image 
+                  src="../public/iglogo.png" 
+                  id='iglogo'
+                  alt='instagram'
+                  width={35} 
+                  height={35}
+                />
             </a>
             <a className={styles.facebook} href="https://www.facebook.com/profile.php?id=61550850638212" target="_blank">
-                <img src="../public/fblogo.png" width="35px" height="35px"></img>
+              <Image 
+                  src="../public/fblogo.png" 
+                  id='fblogo'
+                  alt='facebook'
+                  width={35} 
+                  height={35}
+                />
             </a>
         </div>
       </div>
       <div id="background" className={styles.background}>
-          <img className={styles.logoimg} src="../public/logo - circle only-png.png" width="700px"></img>
-          <img className={styles.logotext} src="../public/logo - text only-png.png" width="700px"></img>
+          <Image 
+            className={styles.logoimg} 
+            src="../public/logo - circle only-png.png" 
+            id='logocircle'
+            alt='dearly beloved logo'
+            width={700}
+          />
+          <Image 
+            className={styles.logoimg} 
+            src="../public/logo - text only-png.png" 
+            id='logotext'
+            alt='dearly beloved logo text'
+            width={700}
+          />
       </div>
       <div>
         {content}
