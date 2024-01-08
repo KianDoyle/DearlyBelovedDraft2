@@ -11,6 +11,7 @@ function About() {
                         src="/lezli-face.jpg" 
                         alt="headshot" 
                         width = {500}
+                        layout='intrinsic'
                     />
                 </div>
                 <div id="info-wrapper" className={styles.aboutinfowrapper}>

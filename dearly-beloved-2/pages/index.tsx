@@ -87,6 +87,7 @@ export default function Index() {
             id='logocircle'
             alt='dearly beloved logo'
             width={700}
+            layout='intrinsic'
           />
           <Image 
             className={styles.logoimg} 
@@ -94,6 +95,7 @@ export default function Index() {
             id='logotext'
             alt='dearly beloved logo text'
             width={700}
+            layout='intrinsic'
           />
       </div>
       <div>
