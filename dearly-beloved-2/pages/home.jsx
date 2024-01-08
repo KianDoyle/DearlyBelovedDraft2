@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import querystring from 'querystring';
 import styles from './styles.module.css';
+import Image from 'next/image';
 
 const clientId = 'woixl1iflym0w59';
 const clientSecret = 'zwm6elhd2nrlfkg'; // Replace with your app's client secret
