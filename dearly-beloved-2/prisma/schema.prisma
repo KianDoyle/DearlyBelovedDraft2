@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env(DATABASE_URL)
+  url      = env("DATABASE_URL")
   // postgreqsl://kian_db_handler:kiandbhandler@85.31.238.49:5432/dearlybeloved
 }
 
