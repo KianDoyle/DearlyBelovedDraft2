@@ -35,7 +35,7 @@ export default function Index() {
         <Image 
           className={styles.logoimgtop} 
           id="logo-img" 
-          src="../public/logo - circle only-png.png" 
+          src="/logo - circle only-png.png" 
           alt="logo" 
           width={100} 
           height={100}
@@ -62,7 +62,7 @@ export default function Index() {
         <div className={styles.padding}>
             <a className={styles.instagram} href="https://www.instagram.com/dearlybelovedphotographer/" target="_blank">
                 <Image 
-                  src="../public/iglogo.png" 
+                  src="/iglogo.png" 
                   id='iglogo'
                   alt='instagram'
                   width={35} 
@@ -71,7 +71,7 @@ export default function Index() {
             </a>
             <a className={styles.facebook} href="https://www.facebook.com/profile.php?id=61550850638212" target="_blank">
               <Image 
-                  src="../public/fblogo.png" 
+                  src="/fblogo.png" 
                   id='fblogo'
                   alt='facebook'
                   width={35} 
@@ -83,14 +83,14 @@ export default function Index() {
       <div id="background" className={styles.background}>
           <Image 
             className={styles.logoimg} 
-            src="../public/logo - circle only-png.png" 
+            src="/logo - circle only-png.png" 
             id='logocircle'
             alt='dearly beloved logo'
             width={700}
           />
           <Image 
             className={styles.logoimg} 
-            src="../public/logo - text only-png.png" 
+            src="/logo - text only-png.png" 
             id='logotext'
             alt='dearly beloved logo text'
             width={700}

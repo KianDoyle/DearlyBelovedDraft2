@@ -8,7 +8,7 @@ function About() {
             <div className={styles.aboutwrapper}>
                 <div id="headshot-wrapper" className={styles.aboutheadshotwrapper}>
                     <Image 
-                        src="./public/lezli-face.jpg" 
+                        src="/lezli-face.jpg" 
                         alt="headshot" 
                         width = {500}
                     />

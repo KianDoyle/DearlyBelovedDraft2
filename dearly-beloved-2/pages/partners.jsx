@@ -16,22 +16,22 @@ function Partners() {
             <div class={styles.partnersrow2}>
                 <a href="https://www.chefshorney.co.uk/" class={styles.partnerschefshorney} target="_blank">
                     <Image 
-                        src="Images/ChefShorneyLogo.png"
+                        src="/ChefShorneyLogo.png"
                         alt="Chef Shorney logo"
                     />
                 </a>
                 <a href="https://www.instagram.com/stestrength/" class={styles.partnersstestrength} target="_blank">
                     <div class={styles.partnersstestrengthimagecontainer}>
                         <Image 
-                            src="Images/stestrengthvr1.jpg"
+                            src="/stestrengthvr1.jpg"
                             alt="SteStrength image 1"
                         />
                         <Image 
-                            src="Images/stestrengthls1.jpg"
+                            src="/stestrengthls1.jpg"
                             alt="SteStrength image 1"
                         />
                         <Image 
-                            src="Images/stestrengthls2.jpg"
+                            src="/stestrengthls2.jpg"
                             alt="SteStrength image 1"
                         />
                     </div>
