@@ -22,34 +22,46 @@ export default function Index() {
   //   router.push(`/${newPage}`);
   // };
 
-  let content;
+  // let content;
 
-  switch ( page ) {
-    case 'Admin':
-      content = < Admin />;
-      break;
-    case 'Login':
-      content = < Login />;
-      break;
-    case 'Index':
-      content = < Home />;
-      break;
-    case 'About':
-      content = < About />;
-      break;
-    case 'Contact':
-      content = < Contact />;
-      break;
-    case 'Book':
-      content = < Book />;
-      break;
-    case 'Partners':
-      content = < Partners />;
-      break; 
-    default: 
-      content = < Index />;
-  }
+  // switch ( page ) {
+  //   case 'Admin':
+  //     content = < Admin />;
+  //     break;
+  //   case 'Login':
+  //     content = < Login />;
+  //     break;
+  //   case 'Index':
+  //     content = < Home />;
+  //     break;
+  //   case 'About':
+  //     content = < About />;
+  //     break;
+  //   case 'Contact':
+  //     content = < Contact />;
+  //     break;
+  //   case 'Book':
+  //     content = < Book />;
+  //     break;
+  //   case 'Partners':
+  //     content = < Partners />;
+  //     break; 
+  //   default: 
+  //     content = < Index />;
+  // }
 
+  const pageComponents : { [key: string]: React.ReactElement} = {
+    Admin: <Admin />,
+    Login: <Login />,
+    Index: <Home />,
+    About: <About />,
+    Contact: <Contact />,
+    Book: <Book />,
+    Partners: <Partners />,
+  };
+  
+  const content = pageComponents[page] || <Index />;
+ 
   return (
     <div>
       <div id="logo-link">
@@ -57,21 +69,6 @@ export default function Index() {
       </div>
       <div id="nav" className={styles.nav}>
         <ul className={styles.navlinkswrapper}>
-          {/* <li>
-            <button onClick={()=> handleNavigation('index')}>HOME</button>
-          </li>
-          <li>
-            <button onClick={()=> handleNavigation('about')}>ABOUT</button>
-          </li>
-          <li>
-            <button onClick={()=> handleNavigation('contact')}>CONTACT</button>
-          </li>
-          <li>
-            <button onClick={()=> handleNavigation('book')}>BOOK</button>
-          </li>
-          <li>
-            <button onClick={()=> handleNavigation('partners')}>PARTNERS</button>
-          </li> */}
           <li>
             <button onClick={()=> router.push('/index')} className={styles.navlinks}>HOME</button>
           </li>

@@ -29,7 +29,7 @@ function Admin() {
             <div className={styles.adminbmwrapper}>
                 <div id="bookings" className={styles.adminbooking}>
                     <ul className={styles.adminbookingul}>
-                        { books.map((booking) => (
+                        { bookings.map((booking) => (
                             <li key={booking.id} className={styles.adminbookingli}>
                                 <div id="username" className={styles.adminbookingsusername}>{booking.name}</div>
                                 <div id="date"className={styles.adminbookingsdate}>{booking.date}</div>
@@ -43,7 +43,7 @@ function Admin() {
                 </div>
                 <div id="messages" className={styles.adminmessage}>
                     <ul className={styles.adminmessageul}>
-                        { texts.map((message) => (
+                        { messages.map((message) => (
                             <li key={message.id} className={styles.adminmessageli}>
                                 <div id="message-wrapper" className={styles.adminmessagewrapper}>
                                     <div id="username" className={styles.adminmessageusername}>{message.username}</div>
