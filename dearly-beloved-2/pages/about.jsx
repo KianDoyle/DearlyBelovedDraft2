@@ -1,12 +1,17 @@
 import React from 'react';
 import styles from './styles.module.css';
+import Image from 'next/image';
 
 function About() {
     return (
         <div>
             <div className={styles.aboutwrapper}>
                 <div id="headshot-wrapper" className={styles.aboutheadshotwrapper}>
-                    <img src="./public/lezli-face.jpg" alt="headshot" width = "500px"></img>
+                    <Image 
+                        src="./public/lezli-face.jpg" 
+                        alt="headshot" 
+                        width = {500}
+                    />
                 </div>
                 <div id="info-wrapper" className={styles.aboutinfowrapper}>
                     <p>
