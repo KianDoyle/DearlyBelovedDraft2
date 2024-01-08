@@ -60,7 +60,7 @@ export default function Index() {
     Partners: <Partners />,
   };
   
-  const content = pageComponents[page] || <Index />;
+  const content = pageComponents[page] || <Home />;
  
   return (
     <div>
