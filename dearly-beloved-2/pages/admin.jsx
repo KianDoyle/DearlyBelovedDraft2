@@ -1,27 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import prisma from '../db/prismaClient';
 import styles from './styles.module.css';
 
+async function fetchMessages() {
+    const messages = await prisma.messages.findMany();
+    return messages;
+}
+
+async function fetchBookings() {
+    const bookings = await prisma.bookings.findMany();
+    return bookings;
+}
+
 function Admin() {
+    const [messages, setMessages] = useState([]);
+    const [bookings, setBookings] = useState([]);
 
-    const messages = async ()=> {
-        prisma.messages.findMany();
-        return {
-            props: {
-                messages,
-            },
-        };
-    }
-
-    const bookings = async ()=> {
-        prisma.bookings.findMany();
-
-        return {
-            props: {
-                bookings,
-            },
-        };
-    }
+    useEffect(() => {
+        fetchMessages().then((messages) => setMessages(messages));
+        fetchBookings().then((bookings) => setBookings(bookings));
+    }, []);
 
     return (
         <div className={styles.adminbody}>
@@ -55,6 +53,6 @@ function Admin() {
                 </div>
             </div>
         </div>);
-};
+}
 
 export default Admin;
