@@ -19,7 +19,7 @@ function Partners() {
                         src="/ChefShorneyLogo.png"
                         alt="Chef Shorney logo"
                         width={300}
-                        layout='intrinsic'
+                        height={300}
                     />
                 </a>
                 <a href="https://www.instagram.com/stestrength/" class={styles.partnersstestrength} target="_blank">
@@ -28,19 +28,19 @@ function Partners() {
                             src="/stestrengthvr1.jpg"
                             alt="SteStrength image 1"
                             width={186}
-                            layout='intrinsic'
+                            height={186}
                         />
                         <Image 
                             src="/stestrengthls1.jpg"
                             alt="SteStrength image 1"
                             width={186}
-                            layout='intrinsic'
+                            height={186}
                         />
                         <Image 
                             src="/stestrengthls2.jpg"
                             alt="SteStrength image 1"
                             width={186}
-                            layout='intrinsic'
+                            height={186}
                         />
                     </div>
                 </a>
