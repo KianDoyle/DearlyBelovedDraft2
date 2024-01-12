@@ -27,6 +27,7 @@ const Home = () => {
             // Check if the URL contains the code parameter
             const urlParams = new URLSearchParams(window.location.search);
             const code = urlParams.get('code');
+            console.log("This is the code: ", code);
 
             if (code) {
                 // Exchange code for access token
@@ -34,6 +35,7 @@ const Home = () => {
                 const redirectUri = `${window.location.origin}${window.location.pathname}`;
 
                 try {
+                    console.log("This is the redirectURI: ", redirectUri);
                     const response = await axios.post(tokenUrl, {
                         code,
                         grant_type: 'authorization_code',
@@ -41,7 +43,8 @@ const Home = () => {
                         client_secret: clientSecret,
                         redirect_uri: redirectUri,
                     });
-
+                    
+                    console.log("This is the redirectURI: ", redirectUri);
                     const accessToken = response.data.access_token;
 
                     // Fetch images with the obtained access token
@@ -71,7 +74,7 @@ const Home = () => {
                     {
                         headers: {
                             Authorization: `Bearer ${accessToken}`,
-                            'Content-Type': 'application/json',
+                            'Content-Type': 'application/x-www-form-urlencoded',
                         },
                     }
                 );

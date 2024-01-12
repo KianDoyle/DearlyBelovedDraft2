@@ -2,7 +2,7 @@ import React from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 
-import Admin from './admin';
+// import Admin from './admin';
 import Login from './login';
 import Home from './home';
 import About from './about';
@@ -18,7 +18,7 @@ export default function Index() {
   const page = usePathname();
 
   const pageComponents : { [key: string]: React.ReactElement} = {
-    Admin: <Admin />,
+    // Admin: <Admin />,
     Login: <Login />,
     Index: <Home />,
     About: <About />,
