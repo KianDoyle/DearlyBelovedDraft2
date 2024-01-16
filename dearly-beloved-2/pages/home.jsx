@@ -11,92 +11,10 @@ const Home = () => {
     const [images, setImages] = useState([]);
 
     useEffect(() => {
-
-        const initiateAuth = async () => {
-            const queryParams = querystring.stringify({
-                response_type: 'code',
-                client_id: clientId,
-                redirect_uri: `${window.location.origin}${window.location.pathname}`, // Current page's path
-            });
-
-            // Redirect to Dropbox for authentication
-            window.location.href = `https://www.dropbox.com/oauth2/authorize?${queryParams}`;
-        };
-
-        const processOAuthFlow = async () => {
-            // Check if the URL contains the code parameter
-            const urlParams = new URLSearchParams(window.location.search);
-            const code = urlParams.get('code');
-            console.log("This is the code: ", code);
-
-            if (code) {
-                // Exchange code for access token
-                const tokenUrl = 'https://api.dropboxapi.com/oauth2/token'; // Dropbox token endpoint
-                const redirectUri = `${window.location.origin}${window.location.pathname}`;
-
-                try {
-                    console.log("This is the redirectURI: ", redirectUri);
-                    const response = await axios.post(tokenUrl, {
-                        code,
-                        grant_type: 'authorization_code',
-                        client_id: clientId,
-                        client_secret: clientSecret,
-                        redirect_uri: redirectUri,
-                    });
-                    
-                    console.log("This is the redirectURI: ", redirectUri);
-                    const accessToken = response.data.access_token;
-
-                    // Fetch images with the obtained access token
-                    const fetchedImages = await fetchImagesFromDropbox(accessToken);
-                    setImages(fetchedImages);
-                } catch (error) {
-                    console.error('Error fetching access token:', error);
-                }
-            } else {
-                // If no code parameter, initiate authentication
-                initiateAuth();
-            }
-        };
-
-        const fetchImagesFromDropbox = async (accessToken) => {
-            try {
-                const response = await axios.post(
-                    'https://api.dropboxapi.com/2/files/list_folder',
-                    {
-                        path: '/Website', // Replace with your Dropbox folder path
-                        recursive: false,
-                        include_media_info: true,
-                        include_deleted: false,
-                        include_has_explicit_shared_members: false,
-                        include_mounted_folders: true,
-                    },
-                    {
-                        headers: {
-                            Authorization: `Bearer ${accessToken}`,
-                            'Content-Type': 'application/x-www-form-urlencoded',
-                        },
-                    }
-                );
-
-                const imageFiles = response.data.entries;
-                setImages(imageFiles); // Update state with fetched images
-            } catch (error) {
-                console.error('Error fetching images from Dropbox:', error);
-            }
-        };
-
-        const processAuthentication = async () => {
-            await processOAuthFlow();
-            const urlParams = new URLSearchParams(window.location.search);
-            const code = urlParams.get('code');
-
-            if (!code) {
-                initiateAuth();
-            }
-        };
-
-        processAuthentication();
+        fetch('./pages/images')
+            .then((res) => res.json())
+            .then((data) => setImages(data))
+            .catch((error) => console.error('error fetching images:', error));
     }, []);
 
     return (
@@ -142,6 +60,8 @@ const Home = () => {
             </div>
         </div>
     );
+
+
 };
 
 export default Home;

@@ -29,3 +29,11 @@ model Booking {
   email       String
 }
 
+model Image {
+  id              Int     @id @default(autoincrement)
+  path_display    String
+  client_modified DateTime 
+  name            String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
