@@ -30,7 +30,7 @@ model Booking {
 }
 
 model Image {
-  id              Int     @id @default(autoincrement)
+  id              Int     @id @default(autoincrement())
   path_display    String
   client_modified DateTime 
   name            String
