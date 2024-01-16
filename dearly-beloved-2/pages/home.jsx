@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import querystring from 'querystring';
 import styles from './styles.module.css';
 import Image from 'next/image';
-
-const clientId = 'woixl1iflym0w59';
-const clientSecret = 'zwm6elhd2nrlfkg'; // Replace with your app's client secret
 
 const Home = () => {
     const [images, setImages] = useState([]);
@@ -19,7 +14,6 @@ const Home = () => {
 
     return (
         <div className={styles.indexportfolioimages}>
-            {/* import images from drop box link and 'style' them */}
             <div className={styles.indexrow}>
                 <div className={styles.indexcolumn}>
                     {images.slice(0, 5).map((image) => (
