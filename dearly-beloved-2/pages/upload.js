@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 
 const upload = multer({
   storage: multer.diskStorage({
-    destination: './public/uploads',
+    destination: '../public/uploads',
     filename: (req, file, cb) => cb(null, file.originalname),
   }),
 });
@@ -23,7 +23,7 @@ const handler = nextConnect()
     // Store each image metadata in the database
     const imagePromises = files.map(file => 
       prisma.image.create({
-        data: { url: `/uploads/${file.filename}` },
+        data: { url: `../public/uploads/${file.filename}` },
       })
     );
 
