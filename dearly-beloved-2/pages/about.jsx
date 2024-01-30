@@ -11,6 +11,7 @@ function About() {
                         src="/lezli-face.jpg" 
                         alt="headshot" 
                         width = {500}
+                        height= {750}
                         layout='intrinsic'
                     />
                 </div>

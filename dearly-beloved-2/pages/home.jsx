@@ -6,10 +6,18 @@ const Home = () => {
     const [images, setImages] = useState([]);
 
     useEffect(() => {
-        fetch('./pages/images')
-            .then((res) => res.json())
-            .then((data) => setImages(data))
-            .catch((error) => console.error('error fetching images:', error));
+        fetch('/images')
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+                return res.json();
+            })
+            .then((data) => {
+                // Assuming the data is an array of image objects
+                setImages(data);
+            })
+            .catch((error) => console.error('Error fetching images:', error));
     }, []);
 
     return (
