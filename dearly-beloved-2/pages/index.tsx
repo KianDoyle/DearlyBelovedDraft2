@@ -27,10 +27,11 @@ export default function Index() {
     Partners: <Partners />,
   };
   
-  const content = pageComponents[page] || <Home />;
+  let content = pageComponents[page] || <Home />;
  
   return (
     <div>
+      hello
       <div id="logo-link">
         <Image 
           className={styles.logoimgtop} 
@@ -44,22 +45,22 @@ export default function Index() {
       <div id="nav" className={styles.nav}>
         <ul className={styles.navlinkswrapper}>
           <li>
-            <button onClick={()=> router.push('/index')} className={styles.navlinks}>HOME</button>
+            <button onClick={()=> content=<Home />} className={styles.navlinks}>HOME</button>
           </li>
           <li>
-            <button onClick={()=> router.push('/about')} className={styles.navlinks}>ABOUT</button>
+            <button onClick={()=> content=<About />} className={styles.navlinks}>ABOUT</button>
           </li>
           <li>
-            <button onClick={()=> router.push('/contact')} className={styles.navlinks}>CONTACT</button>
+            <button onClick={()=> content=<Contact />} className={styles.navlinks}>CONTACT</button>
           </li>
           <li>
-            <button onClick={()=> router.push('/book')} className={styles.navlinks}>BOOK</button>
+            <button onClick={()=> content=<Book />} className={styles.navlinks}>BOOK</button>
           </li>
           <li>
-            <button onClick={()=> router.push('/partners')} className={styles.navlinks}>PARTNERS</button>
+            <button onClick={()=> content=<Partners />} className={styles.navlinks}>PARTNERS</button>
           </li>
         </ul>
-        <div className={styles.padding}>
+        {/* <div className={styles.padding}>
             <a className={styles.instagram} href="https://www.instagram.com/dearlybelovedphotographer/" target="_blank">
                 <Image 
                   src="/iglogo.png" 
@@ -78,9 +79,9 @@ export default function Index() {
                   height={35}
                 />
             </a>
-        </div>
+        </div> */}
       </div>
-      <div id="background" className={styles.background}>
+      {/* <div id="background" className={styles.background}>
           <Image 
             className={styles.logoimg} 
             src="/logo - circle only-png.png" 
@@ -97,7 +98,7 @@ export default function Index() {
             width={700}
             height={200}
           />
-      </div>
+      </div> */}
       <div>
         {content}
       </div>

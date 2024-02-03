@@ -32,9 +32,9 @@ body {
   align-content: center;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  visibility: hidden;
+  /* overflow-x: hidden; */
+  /* overflow-y: auto; */
+  /* visibility: hidden; */
 }
 
 /* .nav {

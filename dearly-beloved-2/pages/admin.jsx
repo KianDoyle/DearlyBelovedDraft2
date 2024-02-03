@@ -25,7 +25,7 @@ function Admin() {
 
         const formData = new FormData(event.target);
         try {
-            const response = await fetch('./pages/upload', {
+            const response = await fetch('/api/upload', {
                 method: 'POST',
                 body: formData,
             });
