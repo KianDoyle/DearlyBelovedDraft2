@@ -58,7 +58,6 @@ export default async function images(req, res) {
     // If the images array is empty, send a 404 response
     if (images.length === 0) {
       return res.status(404).json({ message: 'No images found' });
-      console.log('image length is zero')
     }
 
     // Respond with the image data as JSON

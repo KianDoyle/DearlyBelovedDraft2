@@ -83,6 +83,7 @@ function Admin() {
             <div className="formwrapper">
                 <form onSubmit={handleSubmit}>
                     <input type="file" name="file" accept="image/png, image/jpeg" multiple />
+                    <input type='text' name='names' defaultValue='Input the image names here' />
                     <button type="submit" disabled={uploading}>Upload</button>
                 </form>
             </div>
