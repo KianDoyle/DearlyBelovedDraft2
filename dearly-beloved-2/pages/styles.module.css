@@ -201,7 +201,7 @@ a:hover {
     grid-column: 2 / 3;
 }
 
-/* Index page */
+/* Home page */
 .indexportfolioimages {
     width: 100vw;
     /* opacity: 0; */
@@ -224,7 +224,7 @@ a:hover {
     position: relative;
     box-sizing: border-box; /* Includes padding in the element's total width and height */
     /* width: 25%; Makes image fill the column width */
-    height: 50vh; /* Maintains aspect ratio */
+    height: fit-content; /* Maintains aspect ratio */
 }
 /* .index-column:first-of-type {
     padding-left: 0;

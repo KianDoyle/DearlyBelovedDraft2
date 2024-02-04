@@ -31,7 +31,9 @@ const Home = () => {
                                 alt={image.name}
                                 layout="fill"
                                 style={{objectFit:"contain"}}
-                                sizes='(max-width:500px) 100vw, (max-width: 1000px) 45vw, 20vw'
+                                // sizes='(max-width:500px) 100vw, (max-width: 1000px) 45vw, 20vw'
+                                width={image.width}
+                                height={image.height}
                             />
                         </div>
                     ))}
