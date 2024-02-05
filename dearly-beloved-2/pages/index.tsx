@@ -30,8 +30,7 @@ export default function Index() {
   let content = pageComponents[page] || <Home />;
  
   return (
-    <div>
-      hello
+    <div className={styles.body}>
       <div id="logo-link">
         <Image 
           className={styles.logoimgtop} 

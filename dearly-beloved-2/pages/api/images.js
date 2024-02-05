@@ -51,7 +51,8 @@ export default async function images(req, res) {
         id: true,
         path_display: true,  // Assuming this is the correct column name for the image path
         name: true,          // Assuming this is the correct column name for the image name
-        // Include other fields as necessary
+        width: true,
+        height: true,
       },
     });
     console.log('images fetched');

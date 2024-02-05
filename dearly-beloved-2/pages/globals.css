@@ -85,13 +85,14 @@ a:hover {
   color: #FFF0CA;
 }
 
-/* .background {
-  background-color: black;
-  margin: auto;
-  width: 700px;
-  overflow: hidden;
+*{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
+/*
 .logotext {
   opacity: 1;
 }
