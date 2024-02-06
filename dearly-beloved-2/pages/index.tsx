@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 
@@ -13,6 +13,7 @@ import Partners from './partners';
 import styles from './styles.module.css'
 
 export default function Index() {
+  const [currentContent, setCurrentContent] = useState('home');
   
   const router = useRouter();
   const page = usePathname();
@@ -28,20 +29,20 @@ export default function Index() {
   };
   
   let content = pageComponents[page] || <Home />;
- 
+
   return (
     <div className={styles.body}>
-      <div id="logo-link">
-        <Image 
-          className={styles.logoimgtop} 
-          id="logo-img" 
-          src="/logo - circle only-png.png" 
-          alt="logo" 
-          width={100} 
-          height={100}
-        />
-      </div>
       <div id="nav" className={styles.nav}>
+        <div id="logo-link">
+          <Image 
+            className={styles.logoimgtop} 
+            id="logo-img" 
+            src="/logo - circle only-png.png" 
+            alt="logo" 
+            width={100} 
+            height={100}
+          />
+        </div>
         <ul className={styles.navlinkswrapper}>
           <li>
             <button onClick={()=> content=<Home />} className={styles.navlinks}>HOME</button>
@@ -59,7 +60,7 @@ export default function Index() {
             <button onClick={()=> content=<Partners />} className={styles.navlinks}>PARTNERS</button>
           </li>
         </ul>
-        {/* <div className={styles.padding}>
+        <div className={styles.padding}>
             <a className={styles.instagram} href="https://www.instagram.com/dearlybelovedphotographer/" target="_blank">
                 <Image 
                   src="/iglogo.png" 
@@ -78,27 +79,27 @@ export default function Index() {
                   height={35}
                 />
             </a>
-        </div> */}
+        </div>
       </div>
-      {/* <div id="background" className={styles.background}>
+      <div id="background" className={styles.background}>
           <Image 
             className={styles.logoimg} 
             src="/logo - circle only-png.png" 
             id='logocircle'
             alt='dearly beloved logo'
             width={700}
-            height={700}
+            height={680}
           />
           <Image 
-            className={styles.logoimg} 
+            className={styles.logotext} 
             src="/logo - text only-png.png" 
             id='logotext'
             alt='dearly beloved logo text'
             width={700}
-            height={200}
+            height={100}
           />
-      </div> */}
-      <div>
+      </div>
+      <div style={{overflow: 'hidden'}}>
         {content}
       </div>
     </div>

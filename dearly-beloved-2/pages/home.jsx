@@ -23,7 +23,6 @@ const Home = () => {
 
     return (
         <div className={styles.indexportfolioimages}>
-            {/* <div className={styles.indexrow}> */}
                 {images.map((image) => (
                     <div className={styles.indexcolumn} key={image.id} >
                         <Image
@@ -37,7 +36,6 @@ const Home = () => {
                     </div>
                 ))};
             </div>
-        // </div>
     );
 };
 
