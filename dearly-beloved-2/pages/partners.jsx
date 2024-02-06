@@ -29,18 +29,21 @@ function Partners() {
                             alt="SteStrength image 1"
                             width={186}
                             height={186}
+                            layout='intrinsic'
                         />
                         <Image 
                             src="/stestrengthls1.jpg"
                             alt="SteStrength image 1"
                             width={186}
                             height={186}
+                            layout='intrinsic'
                         />
                         <Image 
                             src="/stestrengthls2.jpg"
                             alt="SteStrength image 1"
                             width={186}
                             height={186}
+                            layout='intrinsic'
                         />
                     </div>
                 </a>

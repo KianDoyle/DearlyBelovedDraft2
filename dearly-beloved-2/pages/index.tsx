@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 
-// import Admin from './admin';
+import Admin from './admin';
 import Login from './login';
 import Home from './home';
 import About from './about';
@@ -15,25 +15,35 @@ import styles from './styles.module.css'
 export default function Index() {
   const [currentContent, setCurrentContent] = useState('home');
   
-  const router = useRouter();
-  const page = usePathname();
-
-  const pageComponents : { [key: string]: React.ReactElement} = {
-    // Admin: <Admin />,
-    Login: <Login />,
-    Index: <Home />,
-    About: <About />,
-    Contact: <Contact />,
-    Book: <Book />,
-    Partners: <Partners />,
+  const navigate = (cont: string) => {
+    setCurrentContent(cont);
   };
-  
-  let content = pageComponents[page] || <Home />;
+
+  let ContentComponent;
+  switch (currentContent) {
+    case 'home':
+      ContentComponent = Home;
+      break;
+    case 'about':
+      ContentComponent = About;
+      break;
+    case 'contact':
+      ContentComponent = Contact;
+      break;
+    case 'book':
+      ContentComponent = Book;
+      break;
+    case 'partners':
+      ContentComponent = Partners;
+      break;
+    default:
+      ContentComponent = Home;
+  };
 
   return (
     <div className={styles.body}>
       <div id="nav" className={styles.nav}>
-        <div id="logo-link">
+        <div id="logo-link" onClick={() => navigate('home')}>
           <Image 
             className={styles.logoimgtop} 
             id="logo-img" 
@@ -45,19 +55,19 @@ export default function Index() {
         </div>
         <ul className={styles.navlinkswrapper}>
           <li>
-            <button onClick={()=> content=<Home />} className={styles.navlinks}>HOME</button>
+            <button onClick={()=> navigate('home')} className={styles.navlinks}>HOME</button>
           </li>
           <li>
-            <button onClick={()=> content=<About />} className={styles.navlinks}>ABOUT</button>
+            <button onClick={()=> navigate('about')} className={styles.navlinks}>ABOUT</button>
           </li>
           <li>
-            <button onClick={()=> content=<Contact />} className={styles.navlinks}>CONTACT</button>
+            <button onClick={()=> navigate('contact')} className={styles.navlinks}>CONTACT</button>
           </li>
           <li>
-            <button onClick={()=> content=<Book />} className={styles.navlinks}>BOOK</button>
+            <button onClick={()=> navigate('book')} className={styles.navlinks}>BOOK</button>
           </li>
           <li>
-            <button onClick={()=> content=<Partners />} className={styles.navlinks}>PARTNERS</button>
+            <button onClick={()=> navigate('partners')} className={styles.navlinks}>PARTNERS</button>
           </li>
         </ul>
         <div className={styles.padding}>
@@ -100,7 +110,7 @@ export default function Index() {
           />
       </div>
       <div style={{overflow: 'hidden'}}>
-        {content}
+        <ContentComponent />
       </div>
     </div>
   )
