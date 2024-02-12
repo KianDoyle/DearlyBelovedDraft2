@@ -26,7 +26,7 @@ const Home = () => {
                 {images.map((image) => (
                     <div className={styles.indexcolumn} key={image.id} >
                         <Image
-                            src={`/uploads/${image.path_display}.jpg`}
+                            src={`/uploads/${image.path_display}`}
                             alt={image.name}
                             className='object-contain'
                             objectFit='cover'

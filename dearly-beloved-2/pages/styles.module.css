@@ -102,56 +102,86 @@
 }
 
 /* Admin Page */
-.admin-body {
+.adminbody {
     display: grid;
     text-align: center;
     background: black;
+    color: black;
+    /* color: #F1B821; */
 }
-.admin-title {
+.admintitle {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 3;
+    /* color: black; */
     color: #F1B821;
 }
-.admin-bm-wrapper {
+.adminbmwrapper {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 3;  
     display: grid;
+    color: black;
+    /* color: #F1B821; */
 }
-.admin-booking {
+.adminbooking {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 2;
     color: black;
+    margin-inline: 10px;
+    width: 45vw;
+    /* color: #F1B821; */
 }
-.admin-booking-ul, .admin-message-ul {
+.adminbookingul, .adminmessageul {
     list-style: none;
     background: rgba(241,184,33, 0.3);
     border-radius: 25px;
     border: 1px solid black;
     margin-block: 5px;
     padding: 0px;
+    color: black;
+    /* color: #F1B821; */
 }
-.admin-booking-li, .admin-message-li {
+.adminbookingli, .adminmessageli {
     background: rgba(241,184,33, 1);
     border-radius: 20px;
-    margin-inline: 10%;
+    margin-inline: 5px;
     margin-block: 5px;
     padding: 10px;
+    color: black;
+    /* color: #F1B821; */
 }
-.admin-message {
+.adminmessage {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 3;
-    margin-inline: 10%;
+    margin-inline: 10px;
     color: black;
+    width: 45vw;
+    /* color: #F1B821; */
 }
 
+.messagetitle, .bookingstitle {
+    color: #F1B821;
+}
+
+.adminformwrapper {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 20px;
+    color: #F1B821;
+}
+
+.adminformtitle {
+    margin: 10px;
+}
 
 /* About page */
 .aboutwrapper {
