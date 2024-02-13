@@ -23,6 +23,12 @@ export default async function images(req, res) {
       return res.status(404).json({ message: 'No images found' });
     }
 
+    // Check if Content-Disposition header already exists
+    if (!res.getHeader('Content-Disposition')) {
+      // Set Content-Disposition header if it doesn't already exist
+      res.setHeader('Content-Disposition', 'inline');
+    }
+
     // Respond with the image data as JSON
     res.status(200).json(images);
   } catch (error) {
