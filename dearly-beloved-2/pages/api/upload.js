@@ -163,7 +163,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 // Configure storage for multer
-const uploadDirectory = path.join(process.cwd(), 'public/uploads');
+const uploadDirectory = path.join(process.cwd(), 'public');
 
 // Ensure the upload directory exists
 if (!fs.existsSync(uploadDirectory)) {
