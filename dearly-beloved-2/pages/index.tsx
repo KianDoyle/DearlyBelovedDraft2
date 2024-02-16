@@ -49,6 +49,7 @@ export default function Index() {
             id="logo-img" 
             src="/logo-circleonly-png.png" 
             alt="logo" 
+            unoptimized
             width={100} 
             height={100}
           />
@@ -76,6 +77,7 @@ export default function Index() {
                   src="/iglogo.png" 
                   id='iglogo'
                   alt='instagram'
+                  unoptimized
                   width={35} 
                   height={35}
                 />
@@ -85,6 +87,7 @@ export default function Index() {
                   src="/fblogo.png" 
                   id='fblogo'
                   alt='facebook'
+                  unoptimized
                   width={35} 
                   height={35}
                 />
@@ -106,6 +109,7 @@ export default function Index() {
             src="/logo-textonly-png.png" 
             id='logotext'
             alt='dearly beloved logo text'
+            unoptimized
             width={700}
             height={100}
           />

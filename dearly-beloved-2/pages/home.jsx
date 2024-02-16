@@ -31,6 +31,7 @@ const Home = () => {
                             className='object-contain'
                             layout='fill'
                             objectFit='cover'
+                            unoptimized
                             width={image.width}
                             height={image.height}
                         />
