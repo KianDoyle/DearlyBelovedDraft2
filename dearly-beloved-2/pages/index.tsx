@@ -92,7 +92,7 @@ export default function Index() {
         </div>
       </div>
       <div id="background" className={styles.background}>
-          <Image 
+          <img 
             className={styles.logoimg} 
             src="/logo-circleonly-png.png" 
             id='logocircle'
