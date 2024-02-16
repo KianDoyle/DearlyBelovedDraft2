@@ -30,7 +30,7 @@ const Home = () => {
                             alt={image.name}
                             className='object-contain'
                             layout='fill'
-                            objectFit='cover'
+                            // objectFit='cover'
                             width={image.width}
                             height={image.height}
                         />
