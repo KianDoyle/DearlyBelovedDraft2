@@ -28,8 +28,8 @@ const Home = () => {
                         <Image
                             src={`/${image.path_display}`}
                             alt={image.name}
-                            className='object-contain'
-                            layout='fill'
+                            // className='object-contain'
+                            // layout='fill'
                             // objectFit='cover'
                             width={500}
                             height={500}
