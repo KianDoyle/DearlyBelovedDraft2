@@ -31,8 +31,8 @@ const Home = () => {
                             className='object-contain'
                             layout='fill'
                             // objectFit='cover'
-                            width={image.width}
-                            height={image.height}
+                            width={500}
+                            height={500}
                         />
                     </div>
                 ))}
