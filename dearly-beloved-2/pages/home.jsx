@@ -28,11 +28,11 @@ const Home = () => {
                         <Image
                             src={`/${image.path_display}`}
                             alt={image.name}
-                            className='object-contain'
-                            layout='responsive'
+                            // className='object-contain'
+                            // layout='responsive'
                             // objectFit='cover'
-                            // width={image.size}
-                            // height={image.size}
+                            width={500}
+                            height={500}
                         />
                     </div>
                 ))}
