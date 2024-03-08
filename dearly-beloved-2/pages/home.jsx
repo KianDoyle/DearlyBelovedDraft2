@@ -31,8 +31,8 @@ const Home = () => {
                             // className='object-contain'
                             layout='responsive'
                             // objectFit='cover'
-                            width={image.size}
-                            height={image.size}
+                            // width={image.size}
+                            // height={image.size}
                         />
                     </div>
                 ))}

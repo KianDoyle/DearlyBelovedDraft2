@@ -90,10 +90,10 @@
     margin-inline: 5px;
     height: auto;
 }
-.indexcolumn img {
-    /* width: auto;
+.indexcolumn Image {
+    width: auto;
     height: 40vh;
-    background: white; */
+    /* background: white; */
 }
 .indexcolumn img:hover {
     z-index: 1000;
