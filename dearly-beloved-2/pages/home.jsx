@@ -29,10 +29,10 @@ const Home = () => {
                             src={`/${image.path_display}`}
                             alt={image.name}
                             // className='object-contain'
-                            // layout='fill'
+                            layout='responsive'
                             // objectFit='cover'
-                            width={500}
-                            height={500}
+                            width={image.size}
+                            height={image.size}
                         />
                     </div>
                 ))}
