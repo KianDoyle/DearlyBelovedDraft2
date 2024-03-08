@@ -28,7 +28,7 @@ const Home = () => {
                         <Image
                             src={`/${image.path_display}`}
                             alt={image.name}
-                            // className='object-contain'
+                            className='object-contain'
                             layout='responsive'
                             // objectFit='cover'
                             // width={image.size}
