@@ -114,7 +114,7 @@ export default function Index() {
             height={100}
           />
       </div>
-      <div style={{overflow: 'hidden'}}>
+      <div style={{zIndex: 1000}}>
         <ContentComponent />
       </div>
     </div>
