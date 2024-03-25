@@ -85,14 +85,14 @@
 }
 
 .indexcolumn {
-    width: auto;
+    width: 25vw;
     margin-block: 3px;
     margin-inline: 5px;
     height: 40vh;
 }
-.indexcolumn Image {
-    /* width: auto;
-    height: 40vh; */
+.indexcolumn img {
+    width: auto;
+    height: 40vh;
     /* background: white; */
 }
 .indexcolumn img:hover {
