@@ -85,12 +85,13 @@
 }
 
 .indexcolumn {
-    width: 25vw;
+    width: auto;
     margin-block: 3px;
     margin-inline: 5px;
     height: 40vh;
 }
 .indexcolumn img {
+    aspect-ratio: auto;
     width: auto;
     height: 40vh;
     /* background: white; */
