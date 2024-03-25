@@ -85,20 +85,20 @@
 }
 
 .indexcolumn {
-    width: 25vw;
+    width: auto;
     margin-block: 3px;
     margin-inline: 5px;
-    height: auto;
+    height: 40vh;
 }
 .indexcolumn Image {
-    width: auto;
-    height: 40vh;
+    /* width: auto;
+    height: 40vh; */
     /* background: white; */
 }
 .indexcolumn img:hover {
     z-index: 1000;
     transform: scale(1.25);
-    transition-duration: 500ms;
+    transition-duration: 250ms;
 }
 
 /* Admin Page */
