@@ -85,18 +85,18 @@
 }
 
 .indexcolumn {
-    width: auto;
+    width: fit-content;
     margin-block: 3px;
     margin-inline: 5px;
-    height: 40vh;
+    height: fit-content;
 }
-.indexcolumn Image {
+.indexcolumn img {
     aspect-ratio: auto;
     width: auto;
-    height: 40vh;
+    height: 30vh;
     /* background: white; */
 }
-.indexcolumn Image:hover {
+.indexcolumn img:hover {
     z-index: 1000;
     transform: scale(1.25);
     transition-duration: 250ms;
