@@ -155,65 +155,65 @@
 
 
 
-import multer from 'multer';
-import fs from 'fs';
-import path from 'path';
-import { PrismaClient } from '@prisma/client';
+// import multer from 'multer';
+// import fs from 'fs';
+// import path from 'path';
+// import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
+// const prisma = new PrismaClient();
 
-// Configure storage for multer
-const uploadDirectory = path.join(process.cwd(), 'public');
+// // Configure storage for multer
+// const uploadDirectory = path.join(process.cwd(), 'public');
 
-// Ensure the upload directory exists
-if (!fs.existsSync(uploadDirectory)) {
-  fs.mkdirSync(uploadDirectory, { recursive: true });
-}
+// // Ensure the upload directory exists
+// if (!fs.existsSync(uploadDirectory)) {
+//   fs.mkdirSync(uploadDirectory, { recursive: true });
+// }
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, uploadDirectory),
-  filename: (req, file, cb) => cb(null, file.originalname), // Use the original file name
-});
+// const storage = multer.diskStorage({
+//   destination: (req, file, cb) => cb(null, uploadDirectory),
+//   filename: (req, file, cb) => cb(null, file.originalname), // Use the original file name
+// });
 
-const upload = multer({ storage }).array('files');
+// const upload = multer({ storage }).array('files');
 
-export const config = {
-  api: {
-    bodyParser: false, // Disabling bodyParser to allow multer to parse multipart/form-data
-  },
-};
+// export const config = {
+//   api: {
+//     bodyParser: false, // Disabling bodyParser to allow multer to parse multipart/form-data
+//   },
+// };
 
-export default function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+// export default function handler(req, res) {
+//   if (req.method !== 'POST') {
+//     return res.status(405).json({ error: 'Method not allowed' });
+//   }
 
-  upload(req, res, async (err) => {
-    if (err instanceof multer.MulterError) {
-      return res.status(500).json({ error: err.message });
-    } else if (err) {
-      return res.status(500).json({ error: 'An unknown error occurred during the file upload.' });
-    }
+//   upload(req, res, async (err) => {
+//     if (err instanceof multer.MulterError) {
+//       return res.status(500).json({ error: err.message });
+//     } else if (err) {
+//       return res.status(500).json({ error: 'An unknown error occurred during the file upload.' });
+//     }
 
-    // Process the uploaded files and add entries to the database
-    try {
-      const imageEntries = req.files.map(async (file) => {
-        return await prisma.image.create({
-          data: {
-            name: file.originalname, // Assuming 'name' is the field in your Image model for the file name
-            path_display: file.filename,
+//     // Process the uploaded files and add entries to the database
+//     try {
+//       const imageEntries = req.files.map(async (file) => {
+//         return await prisma.image.create({
+//           data: {
+//             name: file.originalname, // Assuming 'name' is the field in your Image model for the file name
+//             path_display: file.filename,
             
-            // Add other fields as necessary, e.g., path: file.path, etc.
-          },
-        });
-      });
+//             // Add other fields as necessary, e.g., path: file.path, etc.
+//           },
+//         });
+//       });
 
-      await Promise.all(imageEntries);
+//       await Promise.all(imageEntries);
 
-      res.status(200).json({ message: 'Files uploaded and database entries created successfully', files: req.files.map(file => file.originalname) });
-    } catch (dbError) {
-      console.error('Database error:', dbError);
-      res.status(500).json({ error: 'Failed to create database entries for uploaded files.' });
-    }
-  });
-}
+//       res.status(200).json({ message: 'Files uploaded and database entries created successfully', files: req.files.map(file => file.originalname) });
+//     } catch (dbError) {
+//       console.error('Database error:', dbError);
+//       res.status(500).json({ error: 'Failed to create database entries for uploaded files.' });
+//     }
+//   });
+// }
